@@ -35,5 +35,10 @@ class Test_algromanos(unittest.TestCase):
         self.assertEqual(d, "IV")
         print(d)
 
+    def test_tipo_de_input(self):
+        a = Numero.romano_para_int("abc")
+        self.assertRaises(TypeError, a)
+
+
 if __name__ == '__main__':
     unittest.main()
