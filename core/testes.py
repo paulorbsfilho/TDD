@@ -40,43 +40,43 @@ class Test_algromanos(unittest.TestCase):
         try:
             a = Numero.roman_to_int('IIII')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 4 vezes")
+            print (u"Este algarismo não pode ser repetido 2 vezes: I")
 
     def test_repeticao_algarismo_V(self):
         try:
             a = Numero.roman_to_int('VV')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 2 vezes")
+            print(u"Este algarismo não pode ser repetido 2 vezes: V")
 
     def test_repeticao_algarismo_X(self):
         try:
             a = Numero.roman_to_int('XXXX')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 4 vezes")
+            print(u"Este algarismo não pode ser repetido 4 vezes: X")
 
     def test_repeticao_algarismo_L(self):
         try:
             a = Numero.roman_to_int('LL')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 2 vezes")
+            print(u"Este algarismo não pode ser repetido 2 vezes: L")
 
     def test_repeticao_algarismo_C(self):
         try:
             a = Numero.roman_to_int('CCCC')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 4 vezes")
+            print(u"Este algarismo não pode ser repetido 4 vezes: C")
 
     def test_repeticao_algarismo_D(self):
         try:
             a = Numero.roman_to_int('DD')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 2 vezes")
+            print(u"Este algarismo não pode ser repetido 2 vezes: D")
 
     def test_repeticao_algarismo_M(self):
         try:
             a = Numero.roman_to_int('MMMM')
         except ValueError:
-            print(u"Este algarismo não pode ser repetido 4 vezes")
+            print(u"Este algarismo não pode ser repetido 4 vezes: M")
 
     def test_ordem_dos_algarismos(self):
         ar = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
