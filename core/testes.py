@@ -36,5 +36,47 @@ class Test_algromanos(unittest.TestCase):
         g = Numero.roman_to_int('M')
         self.assertEqual(g, 1000)
 
+    def test_repeticao_numero_I(self):
+        try:
+            a = Numero.roman_to_int('IIII')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 4 vezes")
+
+    def test_repeticao_numero_V(self):
+        try:
+            a = Numero.roman_to_int('VV')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 2 vezes")
+
+    def test_repeticao_numero_X(self):
+        try:
+            a = Numero.roman_to_int('XXXX')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 4 vezes")
+
+    def test_repeticao_numero_L(self):
+        try:
+            a = Numero.roman_to_int('LL')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 2 vezes")
+
+    def test_repeticao_numero_C(self):
+        try:
+            a = Numero.roman_to_int('CCCC')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 4 vezes")
+
+    def test_repeticao_numero_D(self):
+        try:
+            a = Numero.roman_to_int('DD')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 2 vezes")
+
+    def test_repeticao_numero_M(self):
+        try:
+            a = Numero.roman_to_int('MMMM')
+        except ValueError:
+            print(u"Este algarismo não pode ser repetido 4 vezes")
+
 if __name__ == '__main__':
     unittest.main()
