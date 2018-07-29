@@ -42,33 +42,29 @@ class Numero():
         else:
             raise ValueError('a is not a valid Roman numeral: %s' % a)
 
-
-class Conversor():
-
-    def converter(self,a):
-        if type(a)==type(1):
-            r = Numero()
-            return r.int_to_roman(a)
-        elif type(a)==type(""):
-            n = Numero()
-            return n.roman_to_int(a)
+    def converter(a):
+        if type(a) == type(1):
+            c = Numero.int_to_roman(a)
+        elif type(a) == type(""):
+            c = Numero.roman_to_int(a)
         else:
             raise TypeError("expected integer, got %s" % type(a))
+        return c
 
 
 def main():
     print("Digite um numero em algarismos romamos")
-    #a = a()
+    # a = a()
     n = Numero.roman_to_int("xx")
     print(n)
     print("Digite um numero inteiro")
-    #b = int(a())
+    # b = int(a())
     r = Numero.int_to_roman(99)
     print(r)
-    # t = Conversor.converter(12)
-    # print(t)
-    # v = Conversor.converter("MMXVIII")
-    # print(v)
+    t = Numero.converter(12)
+    print(t)
+    v = Numero.converter("MMXVIII")
+    print(v)
 
 
 if __name__ == '__main__':
