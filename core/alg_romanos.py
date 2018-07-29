@@ -45,13 +45,13 @@ class Numero():
 
 class Conversor():
 
-    def converter(a):
-        if not isinstance(a, type(1)):
+    def converter(self,a):
+        if type(a)==type(1):
             r = Numero()
             return r.int_to_roman(a)
-        elif not isinstance(a, type("")):
+        elif type(a)==type(""):
             n = Numero()
-            return n.roman_to_int()
+            return n.roman_to_int(a)
         else:
             raise TypeError("expected integer, got %s" % type(a))
 
@@ -65,6 +65,10 @@ def main():
     #b = int(a())
     r = Numero.int_to_roman(99)
     print(r)
+    # t = Conversor.converter(12)
+    # print(t)
+    # v = Conversor.converter("MMXVIII")
+    # print(v)
 
 
 if __name__ == '__main__':
