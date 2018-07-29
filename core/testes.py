@@ -106,6 +106,12 @@ class Test_algromanos(unittest.TestCase):
         b = Numero.converter("XII")
         self.assertEqual(b, 12)
 
+    def test_input_vazio(self):
+        try:
+            a = Numero.converter("")
+        except ValueError:
+            print(u"Entrada vazia. Você não inseriu numeros romanos ou inteiros")
+
 
 if __name__ == '__main__':
     unittest.main()
