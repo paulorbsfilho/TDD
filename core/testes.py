@@ -36,47 +36,66 @@ class Test_algromanos(unittest.TestCase):
         g = Numero.roman_to_int('M')
         self.assertEqual(g, 1000)
 
-    def test_repeticao_numero_I(self):
+    def test_repeticao_algarism_I(self):
         try:
             a = Numero.roman_to_int('IIII')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 4 vezes")
 
-    def test_repeticao_numero_V(self):
+    def test_repeticao_algarismo_V(self):
         try:
             a = Numero.roman_to_int('VV')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 2 vezes")
 
-    def test_repeticao_numero_X(self):
+    def test_repeticao_algarismo_X(self):
         try:
             a = Numero.roman_to_int('XXXX')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 4 vezes")
 
-    def test_repeticao_numero_L(self):
+    def test_repeticao_algarismo_L(self):
         try:
             a = Numero.roman_to_int('LL')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 2 vezes")
 
-    def test_repeticao_numero_C(self):
+    def test_repeticao_algarismo_C(self):
         try:
             a = Numero.roman_to_int('CCCC')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 4 vezes")
 
-    def test_repeticao_numero_D(self):
+    def test_repeticao_algarismo_D(self):
         try:
             a = Numero.roman_to_int('DD')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 2 vezes")
 
-    def test_repeticao_numero_M(self):
+    def test_repeticao_algarismo_M(self):
         try:
             a = Numero.roman_to_int('MMMM')
         except ValueError:
             print(u"Este algarismo não pode ser repetido 4 vezes")
+
+    def test_ordem_dos_algarismos(self):
+        ar = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+        a = "LM"
+        maior = 0
+        menor = 0
+        try:
+            for i in a:
+                if ar[i] > menor:
+                    menor = maior
+                    maior = ar[i]
+                    if menor != 0:
+                        if maior*0.1 == menor or menor*5 == maior:
+                            pass
+                        else:
+                            raise ValueError
+        except ValueError:
+            print(u"A ordem dos algarismos é inválida")
+
 
 if __name__ == '__main__':
     unittest.main()
